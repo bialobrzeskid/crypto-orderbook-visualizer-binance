@@ -1,0 +1,8 @@
+requests==2.31.0
+numpy==1.24.3
+pyTelegramBotAPI==4.12.0
+pandas==2.0.3
+matplotlib==3.7.2
+PyQt6==6.5.2
+winsound; platform_system=="Windows"
+logging==0.5.1.2
