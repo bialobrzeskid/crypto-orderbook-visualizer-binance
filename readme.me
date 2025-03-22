@@ -1,0 +1,101 @@
+# Cryptocurrency Order Book Visualizer
+
+## Overview
+
+This project is a real-time cryptocurrency order book visualizer that fetches data from the Binance API, displays it in a user-friendly interface, and sends Telegram notifications for significant events like large order placements (walls) and order cancellations (spoofing).
+
+## Features
+
+*   **Real-time Order Book Display:** Visualizes the order book data in a table format with price and amount columns.
+*   **Configurable Parameters:** Allows users to configure parameters such as the grouping interval, large wall threshold, cancellation threshold, notification cooldown, and trading pair through a settings dialog.
+*   **Telegram Notifications:** Sends Telegram notifications for large order placements (walls) and order cancellations (spoofing).
+*   **Color-Coded Highlighting:** Highlights order sizes using a color gradient for better visualization.
+*   **Start/Stop Control:** Includes a start/stop button to control order book updates.
+*   **Log Output:** Provides a log output for displaying errors and status messages.
+*   **Multi-Pair Support:** Supports multiple trading pairs (e.g., BTCUSDT, ETHUSDT, XRPUSDT).
+
+## Prerequisites
+
+*   Python 3.7+
+*   Required Python libraries:
+    *   requests
+    *   numpy
+    *   pyTelegramBotAPI (telebot)
+    *   pandas
+    *   matplotlib
+    *   PyQt6
+    *   winsound (for Windows; remove if on another OS)
+
+## Installation
+
+1.  Clone the repository:
+
+    ```bash
+    git clone [repository_url]
+    cd [repository_directory]
+    ```
+
+2.  Create a virtual environment (recommended):
+
+    ```bash
+    python -m venv venv
+    ```
+
+3.  Activate the virtual environment:
+
+    *   On Windows:
+
+        ```bash
+        venv\Scripts\activate
+        ```
+
+    *   On macOS and Linux:
+
+        ```bash
+        source venv/bin/activate
+        ```
+
+4.  Install the required libraries:
+
+    ```bash
+    pip install requests numpy pyTelegramBotAPI pandas matplotlib PyQt6
+    ```
+
+## Configuration
+
+1.  **Telegram Bot Token:** Create a Telegram bot and obtain the token.
+2.  **Telegram Chat ID:** Obtain the chat ID of the Telegram chat you want to send notifications to.
+3.  Open `orderbook.py` and modify the following variables:
+
+    ```python
+    TOKEN = 'YOUR_TELEGRAM_BOT_TOKEN'
+    CHAT_ID = 'YOUR_TELEGRAM_CHAT_ID'
+    ```
+
+## Usage
+
+1.  Run the `orderbook.py` script:
+
+    ```bash
+    python orderbook.py
+    ```
+
+2.  The cryptocurrency order book visualizer will open.
+3.  Use the "Settings" button to configure the application parameters.
+4.  Use the "Start/Stop" button to control order book updates.
+5.  Use the "Show/Hide Log" button to toggle the log output.
+
+## Customization
+
+*   **Trading Pairs:** Add or modify trading pairs in the `default_settings` dictionary in `orderbook.py`.
+*   **Thresholds:** Adjust the `LARGE_WALL_THRESHOLD` and `CANCELLATION_THRESHOLD` variables in `orderbook.py` to suit your preferences.
+*   **Notification Cooldown:** Modify the `NOTIFICATION_COOLDOWN` variable in `orderbook.py` to control the frequency of notifications.
+*   **GUI:** Customize the GUI elements in the `OrderBookGUI` class in `orderbook.py`.
+
+## License
+
+MIT License, do with this code whatever you want. 
+
+## Disclaimer
+
+This project is for informational and educational purposes only. Use it at your own risk. Cryptocurrency trading involves substantial risk of loss.
