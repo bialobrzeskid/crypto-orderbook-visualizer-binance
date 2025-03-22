@@ -51,7 +51,6 @@ flake8 .
 black .
 ```
 
-// ...existing features and screenshots sections...
 
 ## Contributing
 
