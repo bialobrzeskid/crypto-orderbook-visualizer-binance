@@ -6,7 +6,7 @@
 
 This project is a real-time cryptocurrency order book visualizer that fetches data from the Binance API, displays it in a user-friendly interface, and sends Telegram notifications for significant events like large order placements (walls) and order cancellations (spoofing).
 
-// ...existing code until Prerequisites section...
+
 
 ## Quick Start
 
@@ -75,5 +75,3 @@ crypto-orderbook-visualizer/
 │
 └── README.md            # Project documentation
 ```
-
-// ...existing license and disclaimer sections...
